@@ -22,9 +22,4 @@ TaskMaster is a robust task management application designed to streamline your p
   - **Drag-and-Drop Functionality**: Rearrange tasks effortlessly.  
   - **Organization Features**: Manage tasks across teams or projects.  
 
-## Getting Started
-
-### Prerequisites
-- [Node.js](https://nodejs.org/)
-- [PostgreSQL](https://www.postgresql.org/)
 
