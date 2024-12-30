@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  name     String
+  password String
+  todos    Todo[]
+  tags      Tag[]
+}
+
+model Todo {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  done        Boolean
+  deadline    DateTime
+  priority    Int
+  userId      Int
+  user        User     @relation(fields: [userId], references: [id])
+  tags        Tag[]    @relation("TodoTag")
+  deletedAt   DateTime?
+}
+
+
+model Tag {
+  id    Int @id @default(autoincrement())
+  name  String  @unique
+  userId  Int
+  user    User @relation(fields: [userId], references: [id])
+  todos   Todo[] @relation("TodoTag")
+}

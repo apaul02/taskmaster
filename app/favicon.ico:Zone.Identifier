@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/2c04f0af-2023-4b0e-b85f-fb108da6d57d/circle-check-big.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241230%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241230T131826Z&X-Amz-Expires=86400&X-Amz-Signature=60c5f8926f00cc5ac027ca54bdbcf1dad3f4799fdb6fb86f2d212fb23b7eb2fa&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22circle-check-big.ico%22&response-content-type=image%2Fvnd.microsoft.icon&x-id=GetObject
