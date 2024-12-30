@@ -6,9 +6,11 @@ import { ModeToggle } from "./night-mode"
 import { Button } from "./ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 import { GetStartedButton } from "./GetStartedButton"
+import { useRouter } from "next/navigation"
 
 export function Appbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const router = useRouter();
 
   return (
     <div className="px-4 sm:px-6 h-16 py-3 animate-slideIn fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm shadow-sm">
@@ -24,7 +26,7 @@ export function Appbar() {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-center gap-4 lg:gap-8 text-base items-center">
-          <Button variant="outline" size="icon" className="w-9 h-9 rounded-full">
+          <Button variant="outline" size="icon" className="w-9 h-9 rounded-full" onClick={() => router.push("https://github.com/apaul02/taskmaster")}>
             <Github className="w-5 h-5" />
             <span className="sr-only">GitHub</span>
           </Button>

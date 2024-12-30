@@ -124,8 +124,8 @@ export function AppSidebar({ tags }: { tags: TagType[] }) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton className="" asChild>
-              <div className="">
-                <GitHubLogoIcon />
+              <div className=""onClick={() => router.push("https://github.com/apaul02/taskmaster")}>
+                <GitHubLogoIcon  />
                 Github
               </div>
             </SidebarMenuButton>
