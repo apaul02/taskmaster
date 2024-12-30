@@ -4,7 +4,7 @@ const roboto = Roboto({ subsets: ['latin'],
   weight: "300"
 })
 
-export default function() {
+export default  function CalendarPage() {
   return (
     <div className={`flex items-center justify-center min-h-screen ${roboto.className}`}>
       <h1 className="text-5xl md:text-7xl font-extrabold text-center">

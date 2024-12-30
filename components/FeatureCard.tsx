@@ -1,4 +1,6 @@
-export function FeatureCard({icon, title, description}: {icon: any, title: string, description: string}){
+import { ReactNode } from "react";
+
+export function FeatureCard({icon, title, description}: {icon: ReactNode, title: string, description: string}){
   return (
     <div className="flex flex-col items-center text-center p-6 md:p-12 bg-inherit backdrop-blur-sm rounded-lg">
       {icon}

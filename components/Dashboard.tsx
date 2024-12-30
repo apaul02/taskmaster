@@ -11,12 +11,9 @@ import { useToast } from "@/hooks/use-toast"
 import { ToastAction } from "./ui/toast"
 import { undoToggle } from "@/lib/actions/undoToggle"
 import { getTodosOfToday } from "@/lib/actions/getTodosOfToday"
-import { Playfair_Display, Roboto } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import { Todo } from "@/lib/types"
 
-const playfair = Playfair_Display({ subsets: ['latin'],
-  weight: "400"
-})
 
 const roboto = Roboto({ subsets: ['latin'],
   weight: "300"
@@ -224,7 +221,7 @@ export function Dashboard() {
         Welcome back
       </h1>
       <div className="py-4 text-xl md:text-2xl flex justify-center font-semibold">
-        Today's Tasks
+        Today&apos;s Tasks
       </div>
       <div className="space-y-4">
         {todos.map((todo) => (

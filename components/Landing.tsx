@@ -1,6 +1,5 @@
 import { Appbar } from "@/components/Appbar";
 import { FeatureCard } from "@/components/FeatureCard";
-import { Button } from "@/components/ui/button";
 import { BookPlus, CheckCheck, ListTodo, Users } from "lucide-react"
 import { Star } from "lucide-react";
 import { Calendar } from "lucide-react";
@@ -100,7 +99,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center overflow-hidden">
                 <p className="mx-auto py-4 font-montserrat text-gray-500 text-lg md:text-xl max-w-[800px] text-center animate-fadeIn">
-                  Don't Worry Its FREE!
+                  Don&apos;t Worry Its FREE!
                 </p>
               </div>
             </div>

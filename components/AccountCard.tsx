@@ -10,7 +10,6 @@ import { Session } from "next-auth";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { updateProfile } from "@/lib/actions/UpdateProfile";
-import { useRouter } from "next/navigation";
 
 const updateProfileSchema = z.object({
   email: z.string().email({
@@ -32,7 +31,6 @@ type UpdateProfileFormData = z.infer<typeof updateProfileSchema>;
 export function UpdateProfile({ session }: { session: Session }) {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
   
   const form = useForm<UpdateProfileFormData>({
     resolver: zodResolver(updateProfileSchema),

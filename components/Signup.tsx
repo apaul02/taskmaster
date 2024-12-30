@@ -12,7 +12,6 @@ import { CircleCheckBig } from "lucide-react"
 import Link from "next/link"
 import { signup } from "@/lib/actions/signup"
 import { useToast } from "@/hooks/use-toast"
-import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { signIn } from "next-auth/react"
 
@@ -34,7 +33,6 @@ const signupSchema = z.object({
 
 export function SignupForm() {
   const { toast } = useToast();
-  const [open, setOpen] = useState(false)
   const router = useRouter()
   const form = useForm<z.infer<typeof signupSchema>>({
     resolver: zodResolver(signupSchema),
@@ -61,7 +59,6 @@ export function SignupForm() {
             description: response.error
           })
         }
-        setOpen(false)
         return
       }
       const signInResult = await signIn("credentials", {
@@ -84,13 +81,11 @@ export function SignupForm() {
       })
       
       router.push("/dashboard")
-      setOpen(false)
     } catch(e) {
       toast({
         title: "Error while Signing up",
         description: `${e}`
       })
-      setOpen(false)
     }
   }
 

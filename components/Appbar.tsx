@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { CircleCheckBig, Github, Menu, X } from "lucide-react"
+import { CircleCheckBig, Github, Menu } from "lucide-react"
 import { ModeToggle } from "./night-mode"
 import { Button } from "./ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"

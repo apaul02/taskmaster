@@ -1,6 +1,6 @@
 import { Createtag } from "@/components/CreateTag";
 
-export default function () {
+export default function CreateTags () {
   return <div>
     <Createtag />
   </div>

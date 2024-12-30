@@ -1,5 +1,5 @@
 "use client"
-import { Calendar, Home, Inbox, Search, LayoutDashboard, ListTodo, NotebookPen, CirclePlus, Tag, Pen, User2, ChevronUp, LogOutIcon, User, Plus, Hash, Trash } from 'lucide-react'
+import { Calendar, LayoutDashboard, ListTodo, CirclePlus, Tag, User2, ChevronUp, LogOutIcon, Plus, Hash, Trash } from 'lucide-react'
 
 import {
   Sidebar,

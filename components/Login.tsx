@@ -11,7 +11,6 @@ import { ModeToggle } from "./night-mode"
 import { CircleCheckBig } from "lucide-react"
 import Link from "next/link"
 import { useToast } from "@/hooks/use-toast"
-import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { signIn } from "next-auth/react"
 
@@ -26,7 +25,6 @@ const loginSchema = z.object({
 
 export default function Login() {
   const { toast } = useToast();
-  const [open, setOpen] = useState(false);
   const router = useRouter();
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
@@ -60,7 +58,6 @@ export default function Login() {
             description: response.error,
             variant: "destructive"
           })
-          setOpen(false)
         }
         
         console.log(response)
@@ -71,7 +68,6 @@ export default function Login() {
           title: "Success",
           description: "Successfully signed up"
         })
-        setOpen(false);
       }
       
       console.log(response?.status)
@@ -85,7 +81,6 @@ export default function Login() {
         description: `${e}`,
         variant: "destructive"
       })
-      setOpen(false)
     }
   }
 
@@ -139,7 +134,7 @@ export default function Login() {
           </Form>
           <div className="pt-4 text-center text-sm sm:text-base">
             <Link href="/signup" className="hover:text-primary/80 transition-all duration-300 ease-in-out">
-              Don't have an account? Sign up
+              Don&apos;t have an account? Sign up
             </Link>
           </div>
         </CardContent>

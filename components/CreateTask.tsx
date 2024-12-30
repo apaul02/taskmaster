@@ -90,7 +90,6 @@ export function CreateTask() {
 
 
   const { toast } = useToast();
-  const [open, setOpen] = useState(false)
   const form = useForm<z.infer<typeof taskSchema>>({
     resolver: zodResolver(taskSchema),
     defaultValues: {
@@ -115,7 +114,6 @@ export function CreateTask() {
           variant: "destructive"
         })
         console.log(response.error);
-        setOpen(false);
         return
       }
       toast({
@@ -125,7 +123,6 @@ export function CreateTask() {
       form.reset()
       setInputTags([]);
       setSearchTerm("");
-      setOpen(false)
 
     }catch(e) {
       toast({
@@ -133,7 +130,6 @@ export function CreateTask() {
         description: `${e}`,
         variant: "destructive"
       })
-      setOpen(false)
     }
   }
   
@@ -177,7 +173,7 @@ export function CreateTask() {
           <FormField
             control={form.control}
             name="tags"
-            render={({ field }) => (
+            render={() => (
               <FormItem>
                 <FormLabel>Tags</FormLabel>
                 <FormControl>

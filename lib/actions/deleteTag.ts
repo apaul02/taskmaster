@@ -11,7 +11,7 @@ export async function deleteTag(id: number) {
     redirect("/login");
   }
 
-  const response = await prisma.tag.delete({
+    await prisma.tag.delete({
     where: {
       id: id
     }

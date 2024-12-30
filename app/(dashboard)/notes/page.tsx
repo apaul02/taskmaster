@@ -1,6 +1,6 @@
-import { NewTaskButton } from "@/components/NewTaskButton";
 
-export default function() {
+
+export default function NotesPage() {
   return (
     <div>
       <main>

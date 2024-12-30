@@ -7,7 +7,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "./ui/form";
 import { Button } from "./ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
 import { createTag } from "@/lib/actions/createTag";
 import { useRouter } from "next/navigation";
 
@@ -19,7 +18,6 @@ const tagSchema = z.object({
 export function Createtag() {
   const router = useRouter();
   const { toast } = useToast();
-  const [open, setOpen] = useState(false);
   const form = useForm<z.infer<typeof tagSchema>>({
     resolver: zodResolver(tagSchema),
     defaultValues: {
@@ -41,14 +39,12 @@ export function Createtag() {
             variant: "destructive"
           })
         }
-        setOpen(false);
         return;
       }
       toast({
         title: "Created",
         description: response.message
       })
-      setOpen(false);
       form.reset()
       router.refresh()
     }catch(e) {
